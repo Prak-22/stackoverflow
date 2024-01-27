@@ -35,7 +35,7 @@ export const signup = async (req, res) => {
             ip,
         });
         await loginHistory.save();
-        res.status(200).json({ result: newUser, token,"loginHistory":loginHistory });
+        res.status(200).json({ result: newUser, token, "loginHistory": loginHistory });
     } catch (error) {
         res.status(500).json("Something went wrong...");
     }
