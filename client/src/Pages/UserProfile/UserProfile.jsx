@@ -65,7 +65,7 @@ const UserProfile = ({ slideIn, handleSlideIn }) => {
                             <ProfileBio currentProfile={currentProfile} />
                         )}
                     </>
-                    {((JSON.parse(currentUser.result._id) === id) && isLoggedin.loginHistory) && <UserHistory />}
+                    {((currentUser.result._id === id) && isLoggedin.loginHistory) && <UserHistory />}
                 </section>
             </div>
         </div>
