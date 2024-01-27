@@ -19,6 +19,7 @@ const UserProfile = ({ slideIn, handleSlideIn }) => {
   const currentProfile = users.filter((user) => user._id === id)[0];
   const currentUser = useSelector((state) => state.currentUserReducer);
   const [Switch, setSwitch] = useState(false);
+const isloggedin = JSON.parse(localStorage.getItem("Profile"))
 
   return (
     <div className="home-container-1">
@@ -65,9 +66,7 @@ const UserProfile = ({ slideIn, handleSlideIn }) => {
               <ProfileBio currentProfile={currentProfile} />
             )}
           </>
-          {currentUser.result._id === id && (
-            <UserHistory/>
-          )}
+          {((JSON.parse(currentUser.result._id) === id) && isloggedin.loginHistory) && <UserHistory />}
         </section>
       </div>
     </div>
