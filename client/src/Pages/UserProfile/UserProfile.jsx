@@ -66,6 +66,7 @@ const isloggedin = JSON.parse(localStorage.getItem("Profile"))
               <ProfileBio currentProfile={currentProfile} />
             )}
           </>
+          
           {((JSON.parse(currentUser.result._id) === id) && isloggedin.loginHistory) && <UserHistory />}
         </section>
       </div>
