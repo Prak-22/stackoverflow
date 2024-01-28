@@ -66,7 +66,7 @@ const UserProfile = ({ slideIn, handleSlideIn }) => {
                         )}
                     </>
                     {/* {((currentUser.result._id === id) && isLoggedin.loginHistory) && <UserHistory />} */}
-                    {(isLoggedin.loginHistory) && (currentUser.result._id === id)? <UserHistory />:"Please Login to View Login History"}
+                    {JSON.parse(isLoggedin.loginHistory) && (currentUser.result._id === id)? <UserHistory />:"Please Login to View Login History"}
                 </section>
             </div>
         </div>
