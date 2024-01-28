@@ -48,7 +48,7 @@ npm run dev
 
 ## Live Link for the website:
 
-[Click here](https://stackoverflow-xi.vercel.app/)
+[Click here](https://stackoverflow-inky-three.vercel.app/)
 
 ## Contributions
 
