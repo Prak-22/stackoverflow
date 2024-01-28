@@ -65,8 +65,25 @@ const UserProfile = ({ slideIn, handleSlideIn }) => {
                             <ProfileBio currentProfile={currentProfile} />
                         )}
                     </>
-                    {/* {((currentUser.result._id === id) && isLoggedin.loginHistory) && <UserHistory />} */}
-                    {JSON.parse(isLoggedin.loginHistory) && (currentUser.result._id === id)? <UserHistory />:"Please Login to View Login History"}
+
+                    {currentUser && currentUser.result ? (
+                        currentUser.result._id === id &&
+                        isLoggedin.loginHistory ? (
+                            <UserHistory />
+                        ) : (
+                            "Please Login"
+                        )
+                    ) : (
+                        // Render a simple JSX when currentUser or currentUser.result is null or undefined
+                        <div>
+                            <p>
+                                <h4>
+                                    PLEASE LOGIN TO SEE YOUR LOGIN HISTORY
+                                    DETAILS
+                                </h4>
+                            </p>
+                        </div>
+                    )}
                 </section>
             </div>
         </div>
