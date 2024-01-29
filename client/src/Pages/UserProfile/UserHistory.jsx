@@ -17,7 +17,7 @@ const UserHistory = () => {
             <p>OS: {loginHistory.os}</p>
             <p>Device Type: {loginHistory.deviceType}</p>
             <p>IP Address: {loginHistory.ip}</p>
-            <p>Timestamp: {loginHistory.timestamp}</p>
+            {/* <p>Timestamp: {loginHistory.timestamp}</p> */}
         </div>
     );
 };
